@@ -22,5 +22,5 @@ And our json looks like this:
 To map our json the a `Product` object we can simply:
 
 	ObjectMapper objectMapper = new ObjectMapper();
-	Product product = objectMapper.readValue(jsonObject, Product.class);
+	Product product = objectMapper.readValue(jsonString, Product.class);
 
