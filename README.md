@@ -17,7 +17,7 @@ Let's say we have a `Product` class that looks like this:
 
 And our json looks like this:
 
-	`{"name": "potato", "amount": 10, "price": 2.5}`
+	{"name": "potato", "amount": 10, "price": 2.5}
 
 To map our json the a `Product` object we can simply:
 
