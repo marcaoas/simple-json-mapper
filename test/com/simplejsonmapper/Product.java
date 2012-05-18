@@ -1,5 +1,4 @@
 package com.simplejsonmapper;
-import com.simplejsonmapper.JsonField;
 
 
 public class Product {
@@ -7,10 +6,14 @@ public class Product {
 	private String name;
 	private int amount;
 	private double price;
+	private double[] oldPrices;
 	
 	@JsonField("retail_price")
 	private Double retailPrice;
 	
+	public double[] getOldPrices(){
+		return oldPrices;
+	}
 	
 	public String getName() {
 		return name;

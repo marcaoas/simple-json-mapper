@@ -1,6 +1,6 @@
 package com.simplejsonmapper;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
@@ -18,14 +18,18 @@ public class ObjectMapperTest {
 	}
 
 	@Test
-	public void testOAnnotatedMapping() throws JsonMappingException{
+	public void testAnnotatedMapping() throws JsonMappingException{
 		String jsonString = "{\"name\": \"potato\", \"amount\": 10, \"retail_price\": 5.5}";
 		Product product = objectMapper.map(jsonString, Product.class);
 		assertEquals(5.5, product.getRetailPrice(), 0);
 	}
 	
 	@Test
-	public void testCollectionMapping(){
+	public void testArrayMapping() throws JsonMappingException{
+		String jsonString = "{\"name\": \"potato\", \"amount\": 10, \"retail_price\": 5.5, \"oldPrices\":[1.1,3.1,2.2]}";
+		Product product = objectMapper.map(jsonString, Product.class);
+		double prices[] = {1.1,3.1,2.2};
+		assertArrayEquals(prices, product.getOldPrices(),0);
 	}
 
 }
