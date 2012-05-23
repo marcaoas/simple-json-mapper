@@ -14,8 +14,6 @@ public class ObjectArrayType extends Type {
 	
 	@Override
 	public void set(Field f, Object object, Object value) throws JsonMappingException {
-		
-
 	}
 	
 	public static Type getInstance() {
