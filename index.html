@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Simple-json-mapper by marcosbeirigo</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Simple-json-mapper</h1>
+        <p>Simple json-to-object mapper for android</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/marcosbeirigo/simple-json-mapper" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/marcosbeirigo/simple-json-mapper/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/marcosbeirigo/simple-json-mapper/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>Simple json mapper for android</h1>
+
+<h2>What is it?</h2>
+
+<p>Simple json mapper allows you to map json strings directly to java objects. Although there are many great libs with the same purpose, I find them too cumbersome for the kind of apps I'm constantly working on.</p>
+
+<p><strong>THIS IS NOT A FULL JSON-TO-OBJECT MAPPER</strong>. If you're looking for a full featured mapper i suggest you take a look at Jackson or Gson. Use simple json mapper if you're working with simple or small pieces of json data  that you have control over (Almost all the json APIs I use are created by me).</p>
+
+<h2>Usage</h2>
+
+<p>Let's say we have a <code>Product</code> class that looks like this:</p>
+
+<pre><code>public class Product {
+
+    private String name;
+    private int amount;
+    private double price;
+}
+</code></pre>
+
+<p>And our json looks like this:</p>
+
+<pre><code>{"name": "potato", "amount": 10, "price": 2.5}
+</code></pre>
+
+<p>To map our json the a <code>Product</code> object we can simply:</p>
+
+<pre><code>ObjectMapper objectMapper = new ObjectMapper();
+Product product = objectMapper.readValue(jsonString, Product.class);
+</code></pre>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/marcosbeirigo">marcosbeirigo</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
