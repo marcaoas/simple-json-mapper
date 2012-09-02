@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import com.simplejsonmapper.JsonMappingException;
 import com.simplejsonmapper.ObjectMapper;
+import com.simplejsonmapper.Product;
 public class ObjectMapperTest{
 
 	ObjectMapper objectMapper = new ObjectMapper();

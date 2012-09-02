@@ -82,7 +82,8 @@ public class ObjectMapper {
 			Field[] fields = clazz.getDeclaredFields();
 			for (Field field : fields) {
 				String fieldName = getFieldName(field);
-				if (jsonObject.has(fieldName)) {
+				boolean ignore = getIgnoreFIeld(field);
+				if (!ignore && jsonObject.has(fieldName)) {
 					Type type = Type.getFieldType(field);
 					field.setAccessible(true);
 					type.set(field, t,jsonObject.get(fieldName));
@@ -94,6 +95,11 @@ public class ObjectMapper {
 		return t;
 	}
 	
+	private boolean getIgnoreFIeld(Field field) {
+		IgnoreField annotation = field.getAnnotation(IgnoreField.class);
+		return annotation != null;
+	}
+
 	private String getFieldName(Field field) {
 		JsonField annotation = field.getAnnotation(JsonField.class);
 		return annotation != null ? annotation.value() : field.getName();
