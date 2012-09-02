@@ -4,4 +4,6 @@ build/
 .classpath
 .project
 .settings
+*.jar
+*.class
 
