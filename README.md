@@ -1,4 +1,7 @@
 ![Build status](https://secure.travis-ci.org/marcosbeirigo/simple-json-mapper.png)
+
+[Download the jar here](https://github.com/downloads/marcosbeirigo/simple-json-mapper/simple-json-mapper.jar)
+
 #Simple json mapper for android
 
 ##What is it?
