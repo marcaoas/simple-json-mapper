@@ -1,6 +1,14 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 
+ext{
+    sourceCompatibility = JavaVersion.VERSION_1_6
+    targetCompatibility = JavaVersion.VERSION_1_6
+}
+
+println "Proj Target: " + project.targetCompatibility
+println "Proj Source: " + project.sourceCompatibility
+
 repositories {
     mavenCentral()
 }
